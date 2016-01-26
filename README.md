@@ -25,7 +25,11 @@ This guide assumes you have everything installed and the program's files extract
 
 You're done! What we effectively did is route Spotify's output to a seperate audio cable line and then route that audio to your speakers. This is so you can listen to Spotify while it is recording and isolated. Enjoy the music.
 
-## Usage Guide
+## Usage & Configuration
+
+To run the program:
+
+> python spotifyrip.py
 
 ```python
 STORAGE_FOLDER = "E:\Dropbox\Dropbox\Music"
