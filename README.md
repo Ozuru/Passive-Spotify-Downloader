@@ -6,6 +6,10 @@ Passive Spotify Downloader (PSD) passively downloads songs streamed through Spot
 
 I started this project because I was annoyed how how Spotify's mobile app has thousands of ads compared to the few I come across on the computer. When Spotify is playing, the program downloads the file. Optimally, the output file is synced with mobile to allow cross-platform playing. If a file has been recorded already, it creates a copy of it in a file with the timestamp.
 
+Example output of the program running:
+
+![Example output](https://i.imgur.com/t9lmkwV.png)
+
 ## What do I need to run Passive Spotify Downloader?
 
 1. [Virtual Audio Cable](http://software.muzychenko.net/eng/vac.htm)
@@ -23,19 +27,26 @@ This guide assumes you have everything installed and the program's files extract
 5. Ensure the sample rate (in Audio Repeater) is set to 44100. This is what Spotify plays at.
 6. Set the total buffer to 500 and buffers to 12. Increase this if you have issues with the audio quality.
 
-You're done! What we effectively did is route Spotify's output to a seperate audio cable line and then route that audio to your speakers. This is so you can listen to Spotify while it is recording and isolated. Enjoy the music.
+You're done! What we effectively did is route Spotify's output to a separate audio cable line and then route that audio to your speakers. This is so you can listen to Spotify while it is recording and isolated. Enjoy the music.
 
 ## Usage & Configuration
 
-To run the program:
+To run the program (after opening Spotify):
 
 > python spotifyrip.py
 
-```python
-STORAGE_FOLDER = "E:\Dropbox\Dropbox\Music"
-```
+The program will then list all devices. Type the number of the Virtual Audio Cable input and then hit enter. It is typically the first one that is highlighted green. See the example below.
+
+![Interface selection printout](https://i.imgur.com/nmFkBpe.png)
+
+Once selected, go ahead and resume play on Spotify. It will then start recording and give a progress bar and ETA:
+
+![Recording song printout](https://i.imgur.com/kDxDUzq.jpg)
+
+To stop the program, a CTRL + C interrupt exits it gracefully.
 
 ###### STORAGE_FOLDER
+
 This value is the path to where the storage folder is located. No trailing slashes.
 
 ## Credits
